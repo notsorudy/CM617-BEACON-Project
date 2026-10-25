@@ -1,0 +1,61 @@
+{
+ "h_s": 9.25,
+ "k_s": 4.25,
+ "d": 1.5,
+ "Tg": 0.8,
+ "Tt": 10.0,
+ "Hv": 2.0,
+ "dt": 0.005,
+ "proxy_sync_event_A": 0.8909798951221548,
+ "check_event_A": {
+  "rocof0": 0.016376128200219067,
+  "drop": 0.083249397980033,
+  "t_nadir": 10.67
+ },
+ "checks": [
+  {
+   "case": "reference contingency 4,500 MW, 2021 median hour",
+   "demand_MW": 153328.4036,
+   "sync": 0.9479,
+   "H": 8.7678,
+   "drop_Hz": 0.4358,
+   "t_nadir_s": 10.8,
+   "quasi_steady_drop_Hz": 0.2675,
+   "rocof500": 0.0819,
+   "frc_MW_Hz": 16953.3143
+  },
+  {
+   "case": "28 May 2020, 5,346 MW, demand 150 GW",
+   "demand_MW": 150000.0,
+   "sync": 0.9479,
+   "H": 8.7678,
+   "drop_Hz": 0.5293,
+   "t_nadir_s": 10.8,
+   "quasi_steady_drop_Hz": 0.3249,
+   "rocof500": 0.0994,
+   "frc_MW_Hz": 16585.2972
+  },
+  {
+   "case": "28 May 2020, 5,346 MW, demand 170 GW",
+   "demand_MW": 170000.0,
+   "sync": 0.9479,
+   "H": 8.7678,
+   "drop_Hz": 0.467,
+   "t_nadir_s": 10.8,
+   "quasi_steady_drop_Hz": 0.2867,
+   "rocof500": 0.0877,
+   "frc_MW_Hz": 18796.6702
+  },
+  {
+   "case": "28 May 2020, 5,346 MW, demand 190 GW",
+   "demand_MW": 190000.0,
+   "sync": 0.9479,
+   "H": 8.7678,
+   "drop_Hz": 0.4178,
+   "t_nadir_s": 10.8,
+   "quasi_steady_drop_Hz": 0.2565,
+   "rocof500": 0.0785,
+   "frc_MW_Hz": 21008.0432
+  }
+ ]
+}

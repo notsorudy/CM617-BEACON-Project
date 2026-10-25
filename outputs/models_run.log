@@ -1,0 +1,23 @@
+﻿rows used (cycle >= 21): 97947; train rows 27343 from 41 cells
+corr(SoH_Q, chargetime_min) on train: -0.722  corr(SoH_Q, T_avg): -0.099
+alpha fitted on train cells: 0.8384
+M1_full   linear  {} | CV R2 0.731 | train R2 0.851 RMSE 0.0202 | test R2 0.813 RMSE 0.0224 | test2_batch3 R2 -0.073 RMSE 0.0423 | 2s
+M1_full   tree    {'max_depth': 12, 'min_samples_leaf': 400} | CV R2 0.524 | train R2 0.924 RMSE 0.0144 | test R2 0.789 RMSE 0.0238 | test2_batch3 R2 0.644 RMSE 0.0244 | 3s
+M1_full   forest  {'max_depth': 14, 'max_features': 0.5, 'min_samples_leaf': 5} | CV R2 0.623 | train R2 0.999 RMSE 0.0018 | test R2 0.917 RMSE 0.0149 | test2_batch3 R2 0.465 RMSE 0.0299 | 78s
+M1_full   gboost  {'learning_rate': 0.1, 'max_depth': 3, 'min_samples_leaf': 100} | CV R2 0.654 | train R2 0.990 RMSE 0.0051 | test R2 0.923 RMSE 0.0143 | test2_batch3 R2 0.338 RMSE 0.0332 | 5s
+M1_nomeas linear  {} | CV R2 0.357 | train R2 0.521 RMSE 0.0362 | test R2 0.434 RMSE 0.0390 | test2_batch3 R2 -2.793 RMSE 0.0795 | 0s
+M1_nomeas tree    {'max_depth': 8, 'min_samples_leaf': 400} | CV R2 0.387 | train R2 0.792 RMSE 0.0239 | test R2 0.687 RMSE 0.0290 | test2_batch3 R2 -2.226 RMSE 0.0733 | 1s
+M1_nomeas forest  {'max_depth': 14, 'max_features': 0.5, 'min_samples_leaf': 80} | CV R2 0.603 | train R2 0.947 RMSE 0.0120 | test R2 0.747 RMSE 0.0261 | test2_batch3 R2 -1.981 RMSE 0.0705 | 29s
+M1_nomeas gboost  {'learning_rate': 0.05, 'max_depth': 3, 'min_samples_leaf': 100} | CV R2 0.502 | train R2 0.948 RMSE 0.0119 | test R2 0.690 RMSE 0.0289 | test2_batch3 R2 -7.829 RMSE 0.1213 | 4s
+M2        linear  {} | CV R2 0.810 | train R2 0.834 RMSE 0.0214 | test R2 0.776 RMSE 0.0234 | test2_batch3 R2 0.534 RMSE 0.0193 | 0s
+M2        tree    {'max_depth': 12, 'min_samples_leaf': 400} | CV R2 0.837 | train R2 0.902 RMSE 0.0164 | test R2 0.831 RMSE 0.0203 | test2_batch3 R2 0.213 RMSE 0.0251 | 1s
+M2        forest  {'max_depth': 8, 'max_features': 1.0, 'min_samples_leaf': 20} | CV R2 0.857 | train R2 0.952 RMSE 0.0115 | test R2 0.850 RMSE 0.0191 | test2_batch3 R2 0.516 RMSE 0.0197 | 63s
+M2        gboost  {'learning_rate': 0.05, 'max_depth': 3, 'min_samples_leaf': 20} | CV R2 0.886 | train R2 0.952 RMSE 0.0115 | test R2 0.863 RMSE 0.0182 | test2_batch3 R2 0.601 RMSE 0.0179 | 4s
+M2_soh    tree    {'max_depth': 6, 'min_samples_leaf': 100} | CV R2 0.809 | train R2 0.834 RMSE 0.0214 | test R2 0.792 RMSE 0.0225 | test2_batch3 R2 0.157 RMSE 0.0259 | 0s
+M2_soh    forest  {'max_depth': 8, 'max_features': 0.5, 'min_samples_leaf': 80} | CV R2 0.810 | train R2 0.835 RMSE 0.0213 | test R2 0.792 RMSE 0.0225 | test2_batch3 R2 0.157 RMSE 0.0260 | 27s
+M2_soh    gboost  {'learning_rate': 0.05, 'max_depth': 3, 'min_samples_leaf': 20} | CV R2 0.811 | train R2 0.833 RMSE 0.0214 | test R2 0.793 RMSE 0.0225 | test2_batch3 R2 0.162 RMSE 0.0259 | 1s
+M2_IR     linear  {} | CV R2 0.530 | train R2 0.676 RMSE 0.0006 | test R2 0.619 RMSE 0.0007 | test2_batch3 R2 -1.594 RMSE 0.0011 | 0s
+M2_IR     tree    {'max_depth': 4, 'min_samples_leaf': 20} | CV R2 0.579 | train R2 0.693 RMSE 0.0006 | test R2 0.612 RMSE 0.0007 | test2_batch3 R2 -3.608 RMSE 0.0014 | 1s
+M2_IR     forest  {'max_depth': 8, 'max_features': 0.5, 'min_samples_leaf': 5} | CV R2 0.642 | train R2 0.857 RMSE 0.0004 | test R2 0.676 RMSE 0.0006 | test2_batch3 R2 -3.001 RMSE 0.0013 | 55s
+M2_IR     gboost  {'learning_rate': 0.1, 'max_depth': None, 'min_samples_leaf': 100} | CV R2 0.643 | train R2 0.823 RMSE 0.0005 | test R2 0.647 RMSE 0.0006 | test2_batch3 R2 -3.284 RMSE 0.0014 | 1s
+done in 279s

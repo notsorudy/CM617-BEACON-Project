@@ -1,0 +1,24 @@
+﻿                         R2               RMSE           
+split                 cells conditions   cells conditions
+algo   inputs                                            
+forest with days     0.8753     0.8152  0.0230     0.0280
+       without days  0.8736     0.8051  0.0232     0.0288
+gboost with days     0.8515     0.7441  0.0251     0.0330
+       without days  0.8697     0.7661  0.0235     0.0315
+linear with days     0.5775     0.4917  0.0424     0.0465
+       without days  0.5789     0.4996  0.0423     0.0461
+tree   with days     0.8277     0.5439  0.0271     0.0440
+       without days  0.8246     0.5831  0.0273     0.0421
+split                 cells  conditions
+subset inputs                          
+LFP    with days     0.0092      0.0193
+       without days  0.0093      0.0189
+NCA    with days     0.0453      0.0452
+       without days  0.0448      0.0472
+NMC    with days     0.0251      0.0311
+       without days  0.0261      0.0325
+final (no days) linear: {}
+final (no days) tree: {'max_depth': 8, 'min_samples_leaf': 5}
+final (no days) forest: {'max_depth': 12, 'max_features': 0.5, 'min_samples_leaf': 2}
+final (no days) gboost: {'learning_rate': 0.05, 'max_depth': None, 'min_samples_leaf': 15}
+inputs: ['chem_LFP', 'chem_NMC', 'chem_NCA', 'temp_C', 'dod', 'c_discharge', 'efc_nominal']

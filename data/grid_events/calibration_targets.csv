@@ -1,0 +1,38 @@
+item,value,unit,source_page,note
+event_A_datetime,2019-01-21 15:57,IST,Table 5.2 (p.69),single clean event used by POSOCO for inertia estimation
+event_A_initial_frequency,49.885,Hz,Table 5.2 (p.69),
+event_A_all_india_generation,144482,MW,Table 5.2 (p.69),from NLDC SCADA
+event_A_generation_loss,780,MW,Table 5.2 (p.69),
+event_A_initial_rocof,0.0167,Hz/s,Table 5.2 (p.69),from average frequency
+event_A_estimated_inertia,8.06,s,Table 5.2 (p.69),POSOCO estimate
+event_A_nadir,49.804,Hz,Table 5.2 (p.69),
+event_A_frequency_drop,0.0810,Hz,Table 5.2 (p.69),
+event_A_time_to_nadir,10.6,s,Table 5.2 (p.69),
+event_A_power_number,9626.65,MW/Hz,Table 5.2 (p.69),loss / frequency drop at nadir
+event_B_datetime,2020-05-28,date,p.17 and p.21,Sasan-Vindhyachal complex; time and all-India demand not given in text
+event_B_generation_loss,5346,MW,p.17 and p.21,largest observed contingency
+event_B_initial_frequency,50.02,Hz,p.21,
+event_B_nadir,49.54,Hz,p.17 and p.21,drop 0.48 Hz
+event_C_datetime,2014-03-12 19:22,IST,p.20,CGPL Mundra; df/dt load shedding of 960 MW also operated
+event_C_generation_loss,4030,MW,p.20,
+event_C_frequency,49.95 to 49.285,Hz,p.20,drop 0.67 Hz (with load shedding)
+event_D_datetime,2018-04-23 10:42,IST,p.20-21,two-stage drop
+event_D_generation_loss,3089,MW,p.21,
+event_D_frequency,50.01 to 49.71 then 49.61,Hz,p.21,
+system_inertia_range,5 to 9,s,p.17 item 18,assessed from 2014-2021 historical data
+system_inertia_simulation,7,s (demand base),p.101,best fit 11 s on 1e5 MVA base; average H = 7 s gives decent nadir match over 26 events
+average_power_number,10000,MW/Hz,p.17 item 19,loss / frequency drop at nadir; 2014-2021
+median_frequency_response_characteristic,15000,MW/Hz,p.17 item 20 and p.91,steady state; rose from 4000 (Jan 2015) to 15000 (Jan 2021)
+time_to_nadir_range,9 to 14,s,p.17 item 21 and p.90,average about 10 s; Dec 2017 to Jun 2021
+time_to_steady_state,about 50,s,p.90,
+primary_response_start,2 to 4,s,p.91,primary frequency response comes in within 2-4 s
+load_damping,2 to 5,% per Hz,p.17 item 22 and p.101,load frequency sensitivity
+posoco_model_governor_time_constant,0.8,s,p.99,first-order governor Tg
+posoco_model_turbine_time_constant,10,s,p.99,first-order turbine Tt
+posoco_model_droop,5,%,p.101,assumed for all generators (stated as an ideal assumption)
+reference_contingency,4500,MW,p.17 item 24,IEGC 2020 expert committee; for defence plans
+reference_contingency_simulated_nadir,49.55,Hz,p.17 item 25,POSOCO simulation (not a measurement)
+reference_contingency_quasi_steady,49.71,Hz,p.17 item 26,POSOCO simulation with FRC 15500 MW/Hz
+ufls_first_stage,49.4,Hz,p.17 item 27,automatic under-frequency load shedding
+rocof_load_shedding_first_stage,0.1 Hz/s at 49.9 Hz,,p.17 item 28,
+instantaneous_solar_wind_max_share,27,%,p.17 item 9,as on 30 Nov 2021

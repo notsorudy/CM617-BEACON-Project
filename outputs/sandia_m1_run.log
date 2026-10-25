@@ -1,0 +1,55 @@
+﻿points 566 (first check of each cell removed), cells 85, conditions 33
+points per chemistry: {'LFP': 328, 'NMC': 152, 'NCA': 86}
+done: cells
+done: conditions
+
+out-of-fold results, all points:
+                       MAE                 R2               RMSE           
+split                cells conditions   cells conditions   cells conditions
+algo                                                                       
+baseline_chem_line  0.0327     0.0362  0.5509     0.4958  0.0437     0.0463
+baseline_mean       0.0497     0.0511 -0.0051    -0.0477  0.0654     0.0667
+forest              0.0127     0.0191  0.8753     0.8152  0.0230     0.0280
+gboost              0.0147     0.0214  0.8515     0.7441  0.0251     0.0330
+linear              0.0288     0.0335  0.5775     0.4917  0.0424     0.0465
+tree                0.0150     0.0266  0.8277     0.5439  0.0271     0.0440
+
+by chemistry and SoH range, RMSE:
+subset                         0.8-0.9   < 0.8     LFP     NCA     NMC  SoH >= 0.9
+split      algo                                                                   
+cells      baseline_chem_line   0.0487  0.1013  0.0276  0.0754  0.0475      0.0316
+           baseline_mean        0.0552  0.1940  0.0494  0.1100  0.0616      0.0476
+           forest               0.0280  0.0625  0.0092  0.0453  0.0251      0.0112
+           gboost               0.0310  0.0652  0.0108  0.0484  0.0279      0.0129
+           linear               0.0252  0.1323  0.0225  0.0830  0.0413      0.0341
+           tree                 0.0364  0.0639  0.0109  0.0565  0.0258      0.0123
+conditions baseline_chem_line   0.0536  0.1033  0.0292  0.0730  0.0559      0.0327
+           baseline_mean        0.0564  0.1958  0.0510  0.1110  0.0633      0.0493
+           forest               0.0338  0.0692  0.0193  0.0452  0.0311      0.0166
+           gboost               0.0427  0.0753  0.0174  0.0528  0.0427      0.0182
+           linear               0.0274  0.1362  0.0300  0.0845  0.0454      0.0401
+           tree                 0.0611  0.0875  0.0264  0.0729  0.0521      0.0230
+
+leave-condition-out, forest: worst 6 conditions by MAE:
+     split   algo        condition    MAE  n
+conditions forest NMC_15C_100_2.0C 0.0798  2
+conditions forest NMC_15C_100_1.0C 0.0590  2
+conditions forest NCA_15C_100_1.0C 0.0573  7
+conditions forest NMC_35C_100_2.0C 0.0496  7
+conditions forest NCA_15C_100_2.0C 0.0473 10
+conditions forest NCA_25C_100_2.0C 0.0415 10
+final linear: {}
+final tree: {'max_depth': 8, 'min_samples_leaf': 5}
+final forest: {'max_depth': None, 'max_features': 0.5, 'min_samples_leaf': 2}
+final gboost: {'learning_rate': 0.05, 'max_depth': None, 'min_samples_leaf': 15}
+
+permutation importance (final forest, increase in RMSE):
+chem_NMC       0.0109
+days           0.0115
+temp_C         0.0117
+c_discharge    0.0136
+dod            0.0176
+chem_NCA       0.0211
+efc_nominal    0.0321
+chem_LFP       0.0518
+saved figures

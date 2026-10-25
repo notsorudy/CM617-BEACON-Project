@@ -1,0 +1,33 @@
+{
+ "H_sync": 5.0,
+ "droop": 0.05,
+ "D": 1.0,
+ "T_gov": 3.0,
+ "Hv": 2.0,
+ "T_res": 10.0,
+ "bin": 0.005,
+ "sizing_hour": "2025-06-02 12:00:00",
+ "sizing_sync": 0.605,
+ "sizing_H": 3.025,
+ "peak_request_10pct": 0.03980099502487562,
+ "demands": [
+  0.8,
+  1.0,
+  1.2
+ ],
+ "sohs": [
+  1.0,
+  0.9,
+  0.82,
+  0.7
+ ],
+ "curves": [
+  "quadratic",
+  "linear",
+  "lit_+100%"
+ ],
+ "grid_india_reported_H": [
+  5.0,
+  9.0
+ ]
+}
